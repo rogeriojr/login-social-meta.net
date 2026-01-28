@@ -200,3 +200,6 @@ D:\social-login-meta.net\obj\Debug\net10.0\refint\SocialLoginMeta.dll
 D:\social-login-meta.net\obj\Debug\net10.0\SocialLoginMeta.pdb
 D:\social-login-meta.net\obj\Debug\net10.0\SocialLoginMeta.genruntimeconfig.cache
 D:\social-login-meta.net\obj\Debug\net10.0\ref\SocialLoginMeta.dll
+D:\social-login-meta.net\bin\Debug\net10.0\DotNetEnv.dll
+D:\social-login-meta.net\bin\Debug\net10.0\Sprache.dll
+D:\social-login-meta.net\obj\Debug\net10.0\SocialLoginMeta.sourcelink.json
