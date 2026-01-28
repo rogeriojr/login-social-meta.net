@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "SocialLoginMeta/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.Facebook": "10.0.2"
+        },
+        "runtime": {
+          "SocialLoginMeta.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authentication.Facebook/10.0.2": {
+        "runtime": {
+          "lib/net10.0/Microsoft.AspNetCore.Authentication.Facebook.dll": {
+            "assemblyVersion": "10.0.2.0",
+            "fileVersion": "10.0.225.61305"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SocialLoginMeta/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.AspNetCore.Authentication.Facebook/10.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ZLLssLdISdTQRusGkpwcRQLAg+tWlFKjdRoLL+1XRb8Vrj+joJoWYk/sosGIHZS66/nz3fP+CclB2T59klSZlA==",
+      "path": "microsoft.aspnetcore.authentication.facebook/10.0.2",
+      "hashPath": "microsoft.aspnetcore.authentication.facebook.10.0.2.nupkg.sha512"
+    }
+  }
+}

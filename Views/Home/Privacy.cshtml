@@ -1,0 +1,38 @@
+﻿@model SocialLoginMeta.Models.UserProfileViewModel
+@{
+    ViewData["Title"] = "Meu Perfil";
+}
+
+@if (User.Identity.IsAuthenticated)
+{
+    <div class="profile-card">
+        @if (!string.IsNullOrEmpty(Model.PhotoUrl))
+        {
+            <img src="@Model.PhotoUrl" alt="Foto de Perfil" class="profile-avatar" />
+        }
+        else
+        {
+            <img src="https://via.placeholder.com/120" alt="Foto de Perfil" class="profile-avatar" />
+        }
+        
+        <h2 class="profile-name">@Model.Name</h2>
+        <p class="profile-email">@Model.Email</p>
+
+        <div class="profile-details">
+            <small>Autenticado via:</small>
+            <strong>@Model.Provider</strong>
+        </div>
+        
+        <div class="mt-4">
+             <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Voltar</a>
+        </div>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning text-center mt-5">
+        <h4>Você não está logado.</h4>
+        <p>Por favor, faça login na página inicial.</p>
+        <a asp-action="Index" class="btn btn-primary">Ir para Login</a>
+    </div>
+}
