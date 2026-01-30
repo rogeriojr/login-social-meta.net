@@ -42,6 +42,14 @@ public class HomeController : Controller
         }, Microsoft.AspNetCore.Authentication.Facebook.FacebookDefaults.AuthenticationScheme);
     }
 
+    public IActionResult InstagramLogin()
+    {
+        return Challenge(new Microsoft.AspNetCore.Authentication.AuthenticationProperties
+        {
+            RedirectUri = Url.Action("Privacy", "Home")
+        }, "Instagram");
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {

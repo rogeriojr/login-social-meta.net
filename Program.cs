@@ -46,6 +46,26 @@ builder.Services.AddAuthentication(options =>
             return Task.CompletedTask;
         }
     };
+})
+.AddInstagram(options =>
+{
+    options.ClientId = Environment.GetEnvironmentVariable("INSTAGRAM_CLIENT_ID") ?? builder.Configuration["Authentication:Instagram:ClientId"];
+    options.ClientSecret = Environment.GetEnvironmentVariable("INSTAGRAM_CLIENT_SECRET") ?? builder.Configuration["Authentication:Instagram:ClientSecret"];
+
+    options.Events = new Microsoft.AspNetCore.Authentication.OAuth.OAuthEvents
+    {
+        OnCreatingTicket = context =>
+        {
+            // Instagram Basic Display API might return different properties
+            // We'll try to map common ones
+            var username = context.User.GetProperty("username").GetString();
+            if (!string.IsNullOrEmpty(username))
+            {
+                context.Identity.AddClaim(new System.Security.Claims.Claim(System.Security.Claims.ClaimTypes.Name, username));
+            }
+            return Task.CompletedTask;
+        }
+    };
 });
 
 var app = builder.Build();

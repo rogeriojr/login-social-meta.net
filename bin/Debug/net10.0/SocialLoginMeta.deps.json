@@ -8,11 +8,20 @@
     ".NETCoreApp,Version=v10.0": {
       "SocialLoginMeta/1.0.0": {
         "dependencies": {
+          "AspNet.Security.OAuth.Instagram": "10.0.0",
           "DotNetEnv": "3.1.1",
           "Microsoft.AspNetCore.Authentication.Facebook": "10.0.2"
         },
         "runtime": {
           "SocialLoginMeta.dll": {}
+        }
+      },
+      "AspNet.Security.OAuth.Instagram/10.0.0": {
+        "runtime": {
+          "lib/net10.0/AspNet.Security.OAuth.Instagram.dll": {
+            "assemblyVersion": "10.0.0.0",
+            "fileVersion": "10.0.25.56155"
+          }
         }
       },
       "DotNetEnv/3.1.1": {
@@ -49,6 +58,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AspNet.Security.OAuth.Instagram/10.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-58XJsYO4XgGBZVKsn/tU7ec1Y315BpsPd9Swm5f0K9z2INEf4fZHoN6ThczDNCOpLUozqETU/oNuzUIr0WU1mg==",
+      "path": "aspnet.security.oauth.instagram/10.0.0",
+      "hashPath": "aspnet.security.oauth.instagram.10.0.0.nupkg.sha512"
     },
     "DotNetEnv/3.1.1": {
       "type": "package",

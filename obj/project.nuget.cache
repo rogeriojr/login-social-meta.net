@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UTZ62ImkMKM=",
+  "dgSpecHash": "rtpszOyfSbQ=",
   "success": true,
   "projectFilePath": "D:\\social-login-meta.net\\SocialLoginMeta.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\roger\\.nuget\\packages\\aspnet.security.oauth.instagram\\10.0.0\\aspnet.security.oauth.instagram.10.0.0.nupkg.sha512",
     "C:\\Users\\roger\\.nuget\\packages\\dotnetenv\\3.1.1\\dotnetenv.3.1.1.nupkg.sha512",
     "C:\\Users\\roger\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\10.0.2\\microsoft.aspnetcore.authentication.facebook.10.0.2.nupkg.sha512",
     "C:\\Users\\roger\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

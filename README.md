@@ -14,26 +14,46 @@ No seu projeto, instale os seguintes pacotes NuGet:
 
 ```bash
 dotnet add package Microsoft.AspNetCore.Authentication.Facebook
+dotnet add package AspNet.Security.OAuth.Instagram
 dotnet add package DotNetEnv
 ```
 
-*   `Microsoft.AspNetCore.Authentication.Facebook`: Middleware oficial da Microsoft.
-*   `DotNetEnv`: Para carregar variáveis de ambiente de um arquivo `.env` (segurança).
+*   `Microsoft.AspNetCore.Authentication.Facebook`: Middleware oficial para Facebook.
+*   `AspNet.Security.OAuth.Instagram`: Middleware para Instagram (Basic Display API).
+*   `DotNetEnv`: Para carregar variáveis de ambiente de um arquivo `.env`.
 
 ### 2. Configuração de Segurança (`.env`)
-
-**Nunca** comite chaves de API no GitHub. Use um arquivo `.env`.
-
-1.  Crie um arquivo chamado `.env` na raiz do projeto.
-2.  Adicione `.env` ao seu `.gitignore`.
-3.  Conteúdo do `.env`:
 
 ```env
 FACEBOOK_APP_ID=seu_app_id_aqui
 FACEBOOK_APP_SECRET=seu_app_secret_aqui
+INSTAGRAM_CLIENT_ID=seu_id_instagram_aqui
+INSTAGRAM_CLIENT_SECRET=sua_chave_instagram_aqui
 ```
 
 ### 3. Configuração do `Program.cs`
+
+```csharp
+.AddFacebook(options => { ... })
+.AddInstagram(options =>
+{
+    options.ClientId = Environment.GetEnvironmentVariable("INSTAGRAM_CLIENT_ID");
+    options.ClientSecret = Environment.GetEnvironmentVariable("INSTAGRAM_CLIENT_SECRET");
+    
+    options.Events = new OAuthEvents
+    {
+        OnCreatingTicket = context =>
+        {
+            var username = context.User.GetProperty("username").GetString();
+            if (!string.IsNullOrEmpty(username))
+            {
+                context.Identity.AddClaim(new Claim(ClaimTypes.Name, username));
+            }
+            return Task.CompletedTask;
+        }
+    };
+});
+```
 
 Adicione o seguinte código no início do seu `Program.cs` para carregar as chaves e configurar o serviço.
 

@@ -2,6 +2,22 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "AspNet.Security.OAuth.Instagram/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/AspNet.Security.OAuth.Instagram.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/AspNet.Security.OAuth.Instagram.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "DotNetEnv/3.1.1": {
         "type": "package",
         "dependencies": {
@@ -62,6 +78,21 @@
     }
   },
   "libraries": {
+    "AspNet.Security.OAuth.Instagram/10.0.0": {
+      "sha512": "58XJsYO4XgGBZVKsn/tU7ec1Y315BpsPd9Swm5f0K9z2INEf4fZHoN6ThczDNCOpLUozqETU/oNuzUIr0WU1mg==",
+      "type": "package",
+      "path": "aspnet.security.oauth.instagram/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "README.md",
+        "aspnet.security.oauth.instagram.10.0.0.nupkg.sha512",
+        "aspnet.security.oauth.instagram.nuspec",
+        "lib/net10.0/AspNet.Security.OAuth.Instagram.dll",
+        "lib/net10.0/AspNet.Security.OAuth.Instagram.xml"
+      ]
+    },
     "DotNetEnv/3.1.1": {
       "sha512": "o4SqUVCq0pqHF/HYsZk6k22XGIVmvsDVo+Dy7l0ubq9uQ45JkXswrMRJmYvhGLXWFYF0M5OupMonytB+0zvpGQ==",
       "type": "package",
@@ -148,6 +179,7 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "AspNet.Security.OAuth.Instagram >= 10.0.0",
       "DotNetEnv >= 3.1.1",
       "Microsoft.AspNetCore.Authentication.Facebook >= 10.0.2"
     ]
@@ -195,6 +227,10 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "AspNet.Security.OAuth.Instagram": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          },
           "DotNetEnv": {
             "target": "Package",
             "version": "[3.1.1, )"

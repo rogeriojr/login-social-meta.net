@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SocialLoginMeta")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+976f174b6250a0edeb0b21d1565b274dc41ed713")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8463b674e9f58ba41471a26431f7e5a86b46a816")]
 [assembly: System.Reflection.AssemblyProductAttribute("SocialLoginMeta")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SocialLoginMeta")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
